@@ -1,0 +1,71 @@
+html{
+    margin: 0;
+}
+body{
+    background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+    box-sizing: border-box;
+    font-size: 10px;
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.player{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    max-width: 800px;
+    overflow: hidden;
+}
+.controls{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(100%) translateY(-7px);
+    background-color: black;
+    transition: all 0.3s;
+}
+video{
+    width:100%;
+}
+.other_controls{
+    height:20px;
+    border: 0.5px solid black;
+    display: flex;
+}
+button{
+    cursor: pointer;
+}
+.progress_bar{
+    height: 5px;
+    border: 0.5px solid black;
+    display: flex;
+    transition: all 0.3s;
+}
+.filled{
+    flex: 0;
+    flex-basis: 0%;
+    background: yellow;
+}
+.control1{
+    flex:0 1 10%;
+}
+.control2{
+    flex:0 1 35%;
+}
+.control3{
+    flex:0 1 10%;
+}
+.player:hover .controls
+{
+    transform: translateY(0);
+}
+.player:hover .progress_bar{
+    height: 20px;
+}
+button{
+    text-decoration: none;
+}
