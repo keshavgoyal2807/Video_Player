@@ -61,9 +61,10 @@ progress1.addEventListener('click',update1);
 var isdown=false;
 progress1.addEventListener('mousedown',() => isdown=true);
 progress1.addEventListener('mouseup',() => isdown=false);
-progress1.addEventListener('mouseover',(e) => {
+progress1.addEventListener('mousemove',(e) => {
     if(isdown)
     {
+        console.log(e);
         update1(e);
     }
 });
